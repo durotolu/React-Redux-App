@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 
 import './App.css';
 import * as reducers from './state/reducers';
+import Jokes from './components/Jokes'
 
 const monsterReducer = combineReducers({
   jokes: reducers.jokeReducer,
@@ -23,7 +24,7 @@ function App() {
   return (
     <Provider store={store} >
       <div className="App">
-
+        <Jokes />
       </div>
     </Provider>
   );

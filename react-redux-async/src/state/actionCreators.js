@@ -1,9 +1,10 @@
 import * as types from './actionTypes'
+import axios from 'axios'
 
 const jokesApi = 'https://official-joke-api.appspot.com/jokes/programming/ten'
 
 export const getJokes = () => dispatch => {
-    axios.get()
+    axios.get(jokesApi)
         .then(res => {
             debugger
             let jokes = res.data;
