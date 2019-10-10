@@ -1,6 +1,6 @@
 import React from 'react';
 import thunk from 'redux-thunk';
-import { combineReducers,createStore, compose, applyMiddleware } from 'redux';
+import { combineReducers, createStore, compose, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
 import './App.css';
@@ -21,9 +21,11 @@ const store = createStore(
 
 function App() {
   return (
-    <div className="App">
+    <Provider store={store} >
+      <div className="App">
 
-    </div>
+      </div>
+    </Provider>
   );
 }
 
